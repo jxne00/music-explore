@@ -1,0 +1,30 @@
+.login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.loginBtn {
+    background-color: #23a142;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 5px;
+    outline: 0;
+    border: 0;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.loginBtn:hover {
+    background-color: #1e8e3e;
+}
+
+.redBtn {
+    background-color: red;
+}
+
+.greenBtn {
+    background-color: green;
+}
