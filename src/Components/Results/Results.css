@@ -1,0 +1,49 @@
+.resultsContainer {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.resultItem {
+    display: flex;
+    align-items: center;
+    background-color: #f8f8f8;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+}
+
+.resultItem:hover {
+    transform: translateY(-5px);
+}
+
+.resultImage {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+.resultInfo {
+    flex-grow: 1;
+}
+
+.resultTitle {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.resultDescription {
+    font-size: 14px;
+    color: #666;
+}
+
+.resultArtist, .resultReleaseDate {
+    font-size: 14px;
+    color: #555;
+    margin-top: 2px;
+}

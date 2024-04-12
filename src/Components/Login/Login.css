@@ -1,12 +1,11 @@
 .login {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
+    padding: 20px;
 }
 
 .loginBtn {
+    position: absolute;
+    right: 20px;
+    top: 40px;
     background-color: #23a142;
     color: white;
     padding: 5px 15px;
