@@ -1,18 +1,26 @@
-.login {
-    padding: 20px;
+.loginHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+}
+
+.title {
+    color: #4236c4;
+    font-size: 2.2rem;
+    margin-left: 20px;
+    font-weight: 700;
+    font-family: 'Raleway', sans-serif;
 }
 
 .loginBtn {
-    position: absolute;
-    right: 20px;
-    top: 40px;
     background-color: #23a142;
     color: white;
     padding: 5px 15px;
     border-radius: 5px;
     outline: 0;
     border: 0;
-    font-size: 18px;
+    font-size: 1.1rem;
     cursor: pointer;
 }
 
@@ -21,9 +29,31 @@
 }
 
 .redBtn {
-    background-color: red;
+    background-color: #d0342c;
 }
 
 .greenBtn {
-    background-color: green;
+    background-color: #1db954;
+}
+
+.logoutBtn {
+    display: flex;
+    align-items: center;
+}
+
+.userSection {
+    display: flex;
+    align-items: center;
+}
+
+.userSection img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.loginBtn .fa-svg {
+    margin-left: 14px;
+    color: white;
 }

@@ -19,7 +19,7 @@ const Search = ({ onSearch }) => {
         <form onSubmit={handleSearch} className='searchBox'>
             <input
                 type='text'
-                placeholder='Search for songs, artists, albums...'
+                placeholder='Search for a song, album, or artist'
                 value={searchTerm}
                 onChange={handleChange}
             />

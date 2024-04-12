@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSpotify } from '@fortawesome/free-brands-svg-icons';
+import { faSignOutAlt } from '@fortawesome/free-solid-svg-icons';
 import './Login.css';
 
 const Login = () => {
@@ -85,24 +88,34 @@ const Login = () => {
         window.location.reload();
     };
 
-    if (user) {
-        return (
-            <div className='login'>
-                <h1>Hi {user.display_name}, welcome to Music Explore!</h1>
-                <button onClick={spotifyLogout} className='loginBtn redBtn'>
-                    Logout
-                </button>
-            </div>
-        );
-    }
+    // TODO: user's listening stats
+    const showProfile = () => {
+        console.log(user);
+    };
 
     return (
-        <div className='login'>
-            <h1>Welcome to Music Explore</h1>
-            <button onClick={spotifyLogin} className='loginBtn greenBtn'>
-                Log in with Spotify
-            </button>
-        </div>
+        <header className='loginHeader'>
+            <div className='title'>Music Explore</div>
+            {user ? (
+                // user is logged in
+                <div className='logoutBtn'>
+                    <button onClick={showProfile} className='loginBtn userSection'>
+                        <img src={user.images[0]?.url} alt={user.display_name} />
+                        {user.display_name}
+                    </button>
+                    <button
+                        onClick={spotifyLogout}
+                        className='loginBtn redBtn logoutSection'>
+                        <FontAwesomeIcon icon={faSignOutAlt} />
+                    </button>
+                </div>
+            ) : (
+                // user not logged in
+                <button onClick={spotifyLogin} className='loginBtn greenBtn'>
+                    Login with <FontAwesomeIcon icon={faSpotify} />
+                </button>
+            )}
+        </header>
     );
 };
 

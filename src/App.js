@@ -50,8 +50,8 @@ function App() {
     return (
         <div className='App'>
             <Login />
-            <Search onSearch={handleSearch} />
-            <Results results={searchResults} searchMade={searchMade} />
+            {token && <Search onSearch={handleSearch} />}
+            {token && <Results results={searchResults} searchMade={searchMade} />}
         </div>
     );
 }
